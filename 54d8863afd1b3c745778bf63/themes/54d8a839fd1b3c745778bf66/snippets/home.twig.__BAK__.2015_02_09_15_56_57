@@ -1,0 +1,37 @@
+ <!-- Home Section -->
+            <section class="home-section bg-dark-alfa-30 parallax-3" data-background="{{media_path}}/custom/bghome.jpg" id="home">
+                <div class="js-height-full">
+                    
+                    <!-- Home Page Content -->
+                    <div class="home-content container">
+                        <div class="home-text animate-init" data-anim-type="fade-in-right-big" data-anim-delay="100">
+                            <div class="container align-left">
+                                
+                                <!-- Headings -->
+                                
+                      
+                                <div class="hs-line-7">
+                                    <h1>Officina <span class="serif">Sartoriale</span></h1>
+                                </div>
+                                
+                                <div class="hs-line-8">
+                                    <h4 class="serif">Quando la cura del dettaglio diventa personalità</h4>
+                                </div>
+                                
+                                
+                                <!-- End Headings -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Home Page Content -->
+                    
+                    <!-- Scroll Down -->
+                    <div class="local-scroll">
+                        <a href="#concetto" class="scroll-down"><i class="scroll-down-icon"></i><span>Scoprici</span></a>
+                    </div>
+                    <!-- End Scroll Down -->
+                    
+                </div>
+            </section>
+            <!-- End Home Section -->

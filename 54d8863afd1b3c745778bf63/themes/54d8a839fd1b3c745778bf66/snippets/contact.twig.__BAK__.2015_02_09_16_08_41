@@ -1,0 +1,115 @@
+            <!-- Contact Section -->
+            <section class="page-section bg-scroll bg-dark-alfa-90" data-background="custom/11.jpg" id="contact">
+                <div class="container relative">
+                    
+                    <div class="row">
+                        
+                        <!-- Contact Info -->
+                        <div class="col-md-6">
+                            
+                            <!-- Phone -->
+                            <div class="contact-item contact-item-right mb-40 mb-md-20">
+                                
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                
+                                <div class="ci-title">Pistoia</div>
+                                
+                                <div class="ci-phone"{{config.pistoia.phone}}</div>
+                                
+                            </div>
+                            <!-- End Phone -->
+                            
+                            <!-- Address -->
+                            <div class="contact-item contact-item-right mb-40 mb-md-20">
+                                
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                
+                                
+                                <div class="ci-text">via Tomba di Catilina, 8 <br/>Pistoia </div>
+                                
+                            </div>
+                            <!-- End Address -->
+                            
+                            <!-- Email -->
+                            <div class="contact-item contact-item-right mb-md-40">
+                                
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <a href="mailto:{{config.pistoia.email}}">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </div>
+                                
+                                <div class="ci-title">EMAIL</div>
+                                
+                                <div class="ci-text"><a href="mailto:{{config.pistoia.email}}">{{config.pistoia.email}}</a></div>
+                                
+                            </div>
+                            <!-- End Email -->
+                            
+                        </div>
+                        <!-- End Contact Info -->
+                        
+                        
+                        <div class="col-md-6">
+                            
+                             <!-- Phone -->
+                            <div class="contact-item contact-item-left mb-40 mb-md-20">
+                                
+
+                                
+                                <div class="ci-title">Milano</div>
+                                
+                                <div class="ci-phone">{{config.milano.phone}}</div>
+                              
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+
+                            </div>
+                            <!-- End Phone -->
+                            
+                            <!-- Address -->
+                            <div class="contact-item contact-item-left mb-40 mb-md-20">
+                                
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                   
+                                <div class="ci-text">Foro Buonaparte 54<br/>Milano</div>
+                                
+                            </div>
+                            <!-- End Address -->
+                            
+                            <!-- Email -->
+                            <div class="contact-item contact-item-left mb-md-40">
+                                
+                                <!-- Icon -->
+                                <div class="ci-icon">
+                                    <a href="mailto:milano@officinasartoriale.co.uk">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </div>
+                                
+                                <div class="ci-title">EMAIL</div>
+                                
+                                <div class="ci-text"><a href="mailto:{{config.milano.email}}">{{config.milano.email}}</a></div>
+                                
+                            </div>
+                            <!-- End Email -->
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Contact Section -->

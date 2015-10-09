@@ -1,0 +1,62 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+
+<div class="row">
+
+  <div class="span12">
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li><a href="/account">Account</a> <span class="divider">/</span></li>
+      <li class="active"><a href="#">Login</a></li>
+    </ul>
+
+
+    <div class="row">
+
+      <div class="span5 well">
+        <h3>Nuovo Cliente</h3>
+        <p>Creando un nuovo account sarai in grado di acquistare velocemente, essere sempre aggiornato sullo stato di un ordine, e rivedere la cronologia degli ordini che hai effettuato.</p>
+
+        <form class="" method="get" action="">
+          <fieldset>
+               <br /><br /><br /><br />
+              <a class="btn btn-primary pull-right"  href="/auth/createuser" >Inizia processo di registrazione</a>
+
+          </fieldset>
+        </form>
+      </div>      
+      
+      <div class="span5 well pull-right">
+        <h3>Clienti Registrati</h3>
+        <p>Se sei già un cliente, accedi da qui.</p>
+
+        <form class="" method="post" action="/auth/login">
+          <fieldset>
+            <div class="control-group">
+              <label for="focusedInput" class="control-label">Email</label>
+              <div class="controls">
+              <input type="text" placeholder="Enter your email" id="email" name="email" class="input-xlarge focused">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Password</label>
+              <div class="controls">
+              <input type="password" placeholder="Enter your password" id="password" name="password" class="input-xlarge">
+              </div>
+            </div>
+
+            <button class="btn btn-primary pull-right" type="submit">Login</button>
+          </fieldset>
+        </form>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

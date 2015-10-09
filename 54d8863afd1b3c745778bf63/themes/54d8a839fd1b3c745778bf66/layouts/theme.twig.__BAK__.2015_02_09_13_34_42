@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Officina Sartoriale</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+       
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- include  favicons.twig -->    
+
+         <!-- include  css.twig -->    
+        
+    </head>
+    <body class="appear-animate">
+        
+        <!-- include loader.twig -->
+        
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+            
+            <!-- include home.twig -->          
+            <!-- include navigation.twig -->
+            <!-- include concetticarousel.twig -->
+            <!-- include processo.twig -->
+            <!-- include team.twig -->
+            <!-- include galleria1.twig -->
+            <!-- include testimonial.twig -->
+            <!-- include testimonial2.twig -->
+            <!-- include newsletter.twig -->
+            <!-- include bottommenu.twig -->
+            <!-- include googlemaps.twig -->
+            <!-- include footer.twig -->
+            <!-- include worksexpander.twig -->
+            
+        </div>
+        <!-- End Page Wrap --> 
+        
+        <!--include javascripts.twig -->
+
+    </body>
+</html>

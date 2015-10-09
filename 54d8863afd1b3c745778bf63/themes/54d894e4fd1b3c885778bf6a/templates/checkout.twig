@@ -1,0 +1,348 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+
+<div class="row">
+     <div class="span12">
+         <ul class="breadcrumb">
+    <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+    <a href="/cart">Shopping Cart</a> <span class="divider">/</span>
+    </li>
+    <li class="active">
+    Checkout
+    </li>
+    </ul>
+   </div>
+ </div>
+  
+ <div class="row">
+   <div class="span12">
+   
+ <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+    
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+          <h5>Riepilogo dati cliente</h5>
+        </a>
+      </div>
+      
+      <div id="collapse2" class="accordion-body collapse ">
+        <div class="accordion-inner">
+                   
+            <div class="span6 no_margin_left">
+                    
+                    
+                      <legend>Dati di contatto</legend>
+                      
+                      
+                        <div class="control-group">
+                        <label class="control-label">Nome</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.firstname   }}" name="firstname" class="span4">
+                        </div>
+                        </div>
+                        
+                        
+                        <div class="control-group">
+                        <label class="control-label">Cognome</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.lastname   }}"  name="lastname" class="span4">
+                        </div>
+                        </div>
+                        
+            
+            
+                        
+                        <div class="control-group">
+                        <label class="control-label">Telefono di contatto</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.telephone   }}"  name="telephone" class="span4">
+                        </div>
+                        </div>
+            
+            
+            </div><!-- .span6 -->
+
+            <div class="span5">
+            
+              <legend>Identificazione</legend>
+            
+                <div class="control-group">
+                <label class="control-label">Nome Utente</label>
+                <div class="controls ">
+                  <input type="text" placeholder="Seleziona un nome utente" value="{{ customer.username   }}" name="username" class="span4">
+                </div>
+                </div> 
+            
+            
+                <div class="control-group">
+                <label class="control-label">Email </label>
+                <div class="controls ">
+                  <input type="text" placeholder="Inserisci un indirizzo Email valido" value="{{ customer.email   }}"  name="email"  class="span4">
+                </div>
+                </div>      
+
+            
+            </div><!-- .span5-->
+           
+
+
+
+
+
+                    <div class="span6 no_margin_left">
+                    
+                    
+                        <legend>Indirizzo di fatturazione</legend>
+
+                        <div class="control-group">
+                        <label class="control-label">Indirizzo 1</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.default_address.address1   }}" name="default_address[address1]" class="span4">
+                        </div>
+                        </div>
+                        
+                        
+                        <div class="control-group">
+                        <label class="control-label">Indirizzo 2</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.default_address.address2   }}"  name="default_address[address2]" class="span4">
+                        </div>
+                        </div>
+            
+            
+                        <div class="control-group">
+                        <label class="control-label">Città</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.default_address.city   }}"  name="default_address[city]" class="span4">
+                        </div>
+                        </div>
+                        
+                        
+                        <div class="control-group">
+                        <label class="control-label">Codice postale</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.default_address.zipCode   }}"  name="default_address[zipCode]" class="span4">
+                        </div>
+                        </div>
+                        
+                         
+                        <div class="control-group">
+                        <label class="control-label">Paese/Nazione {{ customer.default_address.country   }}</label>
+                        <div class="controls ">
+                          <select  class="span4" name="default_address[country]">
+                          <option value="uk" >United Kingdom</option>
+                          <option value="us" >United States</option>
+                          </select>
+                        </div>
+                        </div>
+            
+            </div>
+            
+            
+            
+            
+            <div class="span5">
+
+          <legend>Indirizzo di spedizione</legend>
+          
+            <div class="control-group">
+            <label class="control-label">Indirizzo 1</label>
+            <div class="controls docs-input-sizes">
+              <input type="text" placeholder="" value="{{ customer.shipping_address.address1   }}" name="shipping_address[address1]" class="span4">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label">Indirizzo 2</label>
+            <div class="controls docs-input-sizes">
+              <input type="text" placeholder="" value="{{ customer.shipping_address.address2   }}"  name="shipping_address[address2]" class="span4">
+            </div>
+            </div>            <div class="control-group">
+            <label class="control-label">Città</label>
+            <div class="controls docs-input-sizes">
+              <input type="text" placeholder="" value="{{ customer.shipping_address.city   }}"  name="shipping_address[city]" class="span4">
+            </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label">Codice postale</label>
+            <div class="controls docs-input-sizes">
+              <input type="text" placeholder="" value="{{ customer.shipping_address.zipCode   }}"  name="shipping_address[zipCode]" class="span4">
+            </div>
+            </div>
+
+            <div class="control-group">
+            <label class="control-label">Paese/Nazione {{ customer.shipping_address.country   }}</label>
+            <div class="controls docs-input-sizes">
+              <select  class="span4" name="shipping_address[country]">
+              <option value="uk" >United Kingdom</option>
+              <option value="us" >United States</option>
+              </select>
+            </div>
+            </div>
+            
+            
+            </div>
+
+
+
+
+
+
+
+
+        
+        
+        
+        </div>
+      </div>
+    </div>
+      
+      
+          <div class="accordion-group">
+          
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+                      <h5>Riepilogo ordine</h5>
+                    </a>
+                  </div>
+                  
+                  <div id="collapse3" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                          <div class="span11 mt20">
+                          
+                          
+<table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+        <th>Elimina</th>
+        <th>Immagine</th>
+        <th>Prodotto</th>
+        <th>Tipo</th>
+        <th>Quantità</th>
+        <th>Prezzo Unitario</th>
+        <th>Subtotale</th>
+        </tr>
+      </thead>
+      <tbody>
+         {% for item in cart.items %}
+        <tr>
+          <td class=""></td>
+          <td class="muted center_text"><img src="{{item.product.featuredImage.low}}"></td>
+          <td>{{item.name}}</td>
+          <td>{{item.product.type}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{cart.currency}} {{item.price}}</td>
+          <td>{{cart.currency}} {{item.subtotal}}</td>
+        </tr> 
+        {% endfor %}
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Subtotale</td>
+        <td><strong>{{cart.currency}} {{cart.total}}</strong></td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Invio</td>
+        <td><strong>{{cart.currency}} {{cart.shipping}}</strong></td>
+        </tr>   
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Tasse</td>
+        <td><strong>{{cart.currency}} {{cart.taxes}}</strong></td>
+        </tr> 
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Totale</td>
+        <td><strong>{{cart.currency}} {{cart.grandtotal}}</strong></td>
+        </tr>  
+      </tbody>
+      </table>
+                          
+                          </div>
+                    </div>
+                  </div>
+        </div>
+      
+      
+      
+      
+      
+      
+          <div class="accordion-group">
+          <form method="post">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+          <h5>Metodo di pagamento</h5>
+        </a>
+      </div>
+      <div id="collapse4" class="accordion-body collapse in">
+        <div class="accordion-inner">
+            
+              <label class="radio">
+                <input type="radio" name="paymentmethod" id="paymentmethod1" value="collect" checked>
+                Collect in store
+              </label>
+              <label class="radio">
+                <input type="radio" name="paymentmethod" id="paymentmethod2" value="paypal">
+               Paypal
+              </label>
+              <label class="radio">
+                <input type="radio" name="paymentmethod" id="paymentmethod3" value="google">
+                Google checkout
+              </label>
+
+          
+          
+          <div class="control-group">
+            <label for="textarea" class="control-label">Commenti</label>
+            <div class="controls">
+              <textarea rows="3" id="comments" name="comments" class="input-xlarge span11"></textarea>
+            </div>
+          </div>
+            
+            <div class="span11 mt20">
+            
+            <label class="checkbox">
+              <input type="checkbox" name="acceptconditions" value="1">
+              Accetto le condizioni
+            </label>
+            
+            
+                  <button type="submit" class="btn btn-primary pull-right" >Conferma ordine</button>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+      
+      
+      
+      
+      
+
+</div>
+{% endblock %}

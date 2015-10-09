@@ -1,0 +1,11 @@
+            <!-- Google Map -->
+            <div class="google-map">
+                <div data-address="via Tomba di Catilina, 8 51100 Pistoia, Italia" data-color="#000000" id="map-canvas"></div>
+            </div>
+            <!-- End Google Map -->
+        
+            <!-- Google Map -->
+            <div class="google-map">
+                <div data-address="Foro Buonaparte, 54 Milano, Italia" data-color="#000000" id="map-canvas2"></div>
+            </div>
+            <!-- End Google Map -->  

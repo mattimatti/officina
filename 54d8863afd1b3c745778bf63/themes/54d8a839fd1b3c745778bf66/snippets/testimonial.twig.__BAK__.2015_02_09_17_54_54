@@ -1,0 +1,73 @@
+            <!-- Testimonial Section -->
+            <section class="small-section">
+                <div class="container relative">                    
+                    
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            
+                          
+                            <!-- Section Title -->
+                            <h3 class="small-title"><span class="serif">Dicono di</span> noi:</h3>
+                            
+                            <div class="section-line mt-20 mb-30"></div>
+                            
+                             {% if config.testimonial1.text != '' %}
+                            <!-- Slider -->
+                            <div class="single-carousel black owl-carousel">
+                                
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                       {{config.testimonial1.text}}
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                         {{config.testimonial1.referrer}}
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                
+                                 {% endif %}
+                                
+                                
+                                 {% if config.testimonial2.text != '' %}
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                        {{config.testimonial2.text}}
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                        {{config.testimonial2.referrer}}
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                
+                                 {% endif %}
+                                
+                                   {% if config.testimonial3.text != '' %}
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                        {{config.testimonial3.text}}
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                        {{config.testimonial3.referrer}}
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                 {% endif %}
+                                
+                            </div>
+                            <!-- Ent Slider -->
+                            
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </section>
+            <!-- End Testimonial Section -->

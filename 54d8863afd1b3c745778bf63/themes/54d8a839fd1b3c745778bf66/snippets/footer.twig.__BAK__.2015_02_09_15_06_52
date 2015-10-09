@@ -1,0 +1,36 @@
+            <!-- Foter -->
+            <footer class="small-section bg-dark footer">
+                <div class="container animate-init" data-anim-type="bounce-in-up" data-anim-delay="0">
+                    
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        
+                         <!-- Copyright -->
+                        <div class="footer-copy">
+                            <a href="javascript:;" target="_blank">&copy; OfficinaSartoriale All rights reserved <span class="number">2009-2015</span></a>.
+                        </div>
+                        <!-- End Copyright -->
+                        
+                        <div class="footer-made">
+                            Partita IVA IT 01545100479 - Cod. Fisc. VRDNCL 77 M 25 G999V
+                        </div>
+                        
+                    </div>
+                    <!-- End Footer Text -->
+                    
+                    <!-- Social Links -->
+                    <div class="footer-social-links">
+                        <div class="social-links tooltip-bot">
+                            <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="#" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" title="E-mail" target="_blank"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Social Links -->                    
+                 
+                 </div>
+            </footer>
+            <!-- End Foter -->

@@ -1,0 +1,19 @@
+{{configkey('subheader', 'Sottotitolo', config.subheader)}}
+<hr/>
+{{configkey('facebookpage', 'Facebook Page', config.facebookpage)}}
+
+{{configkey('twitterpage', 'Twitter Page', config.twitterpage)}}
+
+
+
+<hr/>
+{{configkey('milano[phone]', 'Telefono Milano', config.milano.phone)}}
+{{configkey('milano[email]', 'Email Milano', config.milano.email)}}
+
+<hr/>
+{{configkey('pistoia[phone]', 'Telefono Pistoia', config.pistoia.phone)}}
+{{configkey('pistoia[email]', 'Email Pistoia', config.pistoia.email)}}
+
+<hr/>
+{{configkey('datifiscali', 'Dati fiscali', config.datifiscali)}}
+

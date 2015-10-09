@@ -1,0 +1,18 @@
+{{configkey('hello', 'Hello Field', config.hello)}}
+<hr/>
+{{configkey('facebookpage', 'Facebook Page', config.facebookpage)}}
+<hr/>
+{{configkey('twitterpage', 'Twitter Page', config.twitterpage)}}
+
+<hr/>
+{{configkey('datifiscali', 'Dati fiscali', config.datifiscali)}}
+
+<hr/>
+{{configkey('subheader', 'Sottotitolo', config.subheader)}}
+
+<hr/>
+{{configkey('milano[phone]', 'Telefono Milano', config.milano.phone)}}
+
+
+<hr/>
+{{configkey('pistoia[phone]', 'Telefono Pistoia', config.pistoia.phone)}}

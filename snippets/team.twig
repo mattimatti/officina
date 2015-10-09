@@ -1,0 +1,78 @@
+<!-- Team Section -->
+            <section class="page-section" id="team">
+                <div class="container relative">
+                    
+                    <!-- Section Headings -->
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                            <h3 class="small-title">
+                                Chi <span class="serif">siamo<span><span class="st-point">?</span>
+                            </h3>
+                             <div class="section-line mt-20 mb-30"></div>
+
+                            <div class="section-heading">Officina Sartoriale nasce a Pistoia da un'idea dal sarto Nicola Verdiani che insieme a Stefano Meriggi, imprenditore milanese nel campo della moda, hanno deciso di allargare i propri orizzonti sbarcando a Milano.</div>
+                            <div class="section-line mb-60 mb-xxs-30"></div>
+                        </div>
+                    </div>
+                    <!-- End Section Headings -->
+                    
+                    <!-- Team Grid -->
+                    <div class="team-grid">
+                        <!-- Team Item -->
+                        <div class="team-item animate-init" data-anim-type="fade-in" data-anim-delay="100">
+                            <div class="team-item-image">
+                               <img src="{{config.team1.image}}" alt="" />
+                                <div class="team-item-detail">
+                                    <h4 class="serif">{{config.team1.hello}}</h4>
+                                   {{config.team1.hellotext}}  
+                                </div>
+                            </div>
+                            <div class="team-item-descr">
+                                <div class="team-item-name">
+                                    {{config.team1.namesurname}}
+                                </div>
+                                <div class="team-item-role">
+                                     {{config.team1.title}}
+                                </div>
+                                <div class="team-social-links">
+                                     {% if config.team1.facebook != '' %}<a href="{{config.team1.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>{% endif %}
+                                     {% if config.team1.twitter != '' %}<a href="{{config.team1.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>{% endif %}
+                                     {% if config.team1.pinterest != '' %}<a href="{{config.team1.pinterest}}" target="_blank"><i class="fa fa-pinterest"></i></a>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Team Item -->
+                        
+                        <!-- Team Item -->
+                        <div class="team-item animate-init" data-anim-type="fade-in" data-anim-delay="200">
+                            <div class="team-item-image">
+                                <img src="{{config.team2.image}}" alt="" />
+                                <div class="team-item-detail">
+                                    <h4 class="serif"> {{config.team2.hello}} </h4>
+                                   {{config.team2.hellotext}} 
+                                </div>
+                            </div>
+                            <div class="team-item-descr">
+                                <div class="team-item-name">
+                                   {{config.team2.namesurname}}
+                                </div>
+                                <div class="team-item-role">
+                                    {{config.team2.title}}
+                                </div>
+                                <div class="team-social-links">
+                                    {% if config.team2.facebook != '' %}<a href="{{config.team2.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>{% endif %}
+                                     {% if config.team2.twitter != '' %}<a href="{{config.team2.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>{% endif %}
+                                     {% if config.team2.pinterest != '' %}<a href="{{config.team2.pinterest}}" target="_blank"><i class="fa fa-pinterest"></i></a>>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Team Item -->
+                        
+                        
+                        
+                    </div>
+                    <!-- End Team Grid -->
+                    
+                </div>
+            </section>
+            <!-- End Team Section -->

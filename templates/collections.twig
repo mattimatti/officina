@@ -1,0 +1,51 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+<div class="row">
+
+    <div class="span3">
+        <ul class="nav">
+            {% for item in collections %}
+             <li>
+                 <a href="{{ item.url }}" >{{ item.name }} ({{ item.products|length }})</a>
+             </li>
+             {% endfor %}          
+        </ul>
+    </div>
+
+    <div class="span9">
+
+          <ul class="breadcrumb">
+              <li>
+              <a href="/">Home</a> <span class="divider">/</span>
+              </li>
+               
+            </ul>
+
+
+        <div class="row">
+        
+          <div class="span9"><!-- start categories -->
+            <ul class="thumbnails">
+            {% for item in collections %}
+              <li class="span3">
+                <div class="thumbnail">
+                  <a href="{{ item.url }}"><img src="" alt="{{ item.name }}"></a>
+                  <div class="caption">
+                     <a href="{{ item.url }}"><h5>{{ item.name }}</h5></a>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div><!-- end categories -->  
+          
+    </div><!-- .row -->
+</div><!-- .column right -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+    <ul>
+    <li><a href="{{ shop.url }}">home</a></li>
+    {% for item in collections %}
+            <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>

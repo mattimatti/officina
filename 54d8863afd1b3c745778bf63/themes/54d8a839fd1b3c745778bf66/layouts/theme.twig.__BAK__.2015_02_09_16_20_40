@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Officina Sartoriale</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+       
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        {% include 'snippets/favicons.twig' %}  
+
+         {% include 'snippets/css.twig' %}
+        
+    </head>
+    <body class="appear-animate">
+        
+        {% include 'snippets/loader.twig' %}
+        
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+        
+{% block content %}
+          
+{% endblock %}   
+        </div>
+        <!-- End Page Wrap --> 
+        
+        {% include 'snippets/javascripts.twig' %}
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+{{configkey('hello', 'Hello Field', config.hello)}}
+<hr/>
+{{configkey('facebookpage', 'Facebook Page', config.facebookpage)}}
+<hr/>
+{{configkey('twitterpage', 'Twitter Page', config.twitterpage)}}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Officina Sartoriale</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+       
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        {% include 'snippets/favicons.twig' %}  
+
+         {% include 'snippets/css.twig' %}
+        
+    </head>
+    <body class="appear-animate">
+        
+        {% include 'snippets/loader.twig' %}
+        
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+            
+            {% include 'snippets/home.twig' %}
+            {% include 'snippets/navigation.twig' %}
+            {% include 'snippets/concetticarousel.twig' %}
+            {% include 'snippets/processo.twig' %}
+            {% include 'snippets/team.twig' %}
+            {% include 'snippets/galleria1.twig' %}
+            {% include 'snippets/testimonial.twig' %}
+            {% include 'snippets/testimonial2.twig' %}
+            {% include 'snippets/newsletter.twig' %}
+            {% include 'snippets/bottommenu.twig' %}
+            {% include 'snippets/googlemaps.twig' %}
+            {% include 'snippets/footer.twig' %}
+            {% include 'snippets/worksexpander.twig' %}
+            
+        </div>
+        <!-- End Page Wrap --> 
+        
+        {% include 'snippets/javascripts.twig' %}
+
+    </body>
+</html>

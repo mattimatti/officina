@@ -1,0 +1,130 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+
+<div class="row">
+     <div class="span12">
+         <ul class="breadcrumb">
+    <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li class="active">
+    Registrazione <span class="divider">/</span>
+    </li>
+    <li class="active">
+     Passo 1
+    </li>
+    </ul>
+   </div>
+ </div>
+  
+ <div class="row">
+   <div class="span12">
+
+    <div class="accordion" id="accordion2">
+
+    <div class="accordion-group">
+    <form method="post">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse " data-parent="#accordion2" href="#collapse2">
+          <h4>Passo 1: Identificazione</h4>
+        </a>
+      </div>
+      <div id="collapse2" class="accordion-body collapse collapse in">
+        <div class="accordion-inner">
+                    <div class="span6 no_margin_left">
+                    
+                    
+                      <legend>Dati di contatto</legend>
+                      
+                      
+                        <div class="control-group">
+                        <label class="control-label">Nome</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.firstname   }}" name="firstname" class="span4">
+                        </div>
+                        </div>
+                        
+                        
+                        <div class="control-group">
+                        <label class="control-label">Cognome</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.lastname   }}"  name="lastname" class="span4">
+                        </div>
+                        </div>
+                        
+            
+            
+                        
+                        <div class="control-group">
+                        <label class="control-label">Telefono di contatto</label>
+                        <div class="controls ">
+                          <input type="text" placeholder="" value="{{ customer.telephone   }}"  name="telephone" class="span4">
+                        </div>
+                        </div>
+            
+            
+            </div><!-- .span6 -->
+            
+            
+            
+            <div class="span5">
+            
+            <legend>Identificazione</legend>
+            
+                <div class="control-group">
+                <label class="control-label">Nome Utente</label>
+                <div class="controls ">
+                  <input type="text" placeholder="Seleziona un nome utente" value="{{ customer.username   }}" name="username" class="span4">
+                </div>
+                </div> 
+            
+            
+                <div class="control-group">
+                <label class="control-label">Email </label>
+                <div class="controls ">
+                  <input type="text" placeholder="Inserisci un indirizzo Email valido" value="{{ customer.email   }}"  name="email"  class="span4">
+                </div>
+                </div>      
+                
+    
+                <div class="control-group">
+                <label class="control-label">Password</label>
+                <div class="controls ">
+                  <input type="password" placeholder="Password" value="" id="password" name="password" class="span4">
+                </div>
+                </div>
+    
+                <div class="control-group">
+                <label class="control-label">Conferma Password</label>
+                <div class="controls ">
+                  <input type="password" placeholder="Password" value="" id="password-confirm" name="password-confirm" class="span4">
+                </div>
+                </div>
+            
+
+            
+            </div>
+            <div class="span11 no_margin_left">
+            <br /><button type="submit" class="btn btn-primary pull-right">Continua</button><br /><br /><br />
+              </div>
+        </div>
+
+      </div>
+      </form>
+    </div>
+      
+      
+
+      
+      
+      
+      
+      
+
+</div>
+{% endblock %}

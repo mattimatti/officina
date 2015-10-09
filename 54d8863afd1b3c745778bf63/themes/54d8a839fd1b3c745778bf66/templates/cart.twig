@@ -1,0 +1,172 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+<div class="row">
+     <div class="span12">
+         <ul class="breadcrumb">
+    <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li class="active">
+    <a href="/cart">Shopping Cart</a>
+    </li>
+    </ul>
+   </div>
+ </div>
+
+
+
+
+
+<form method="post" action="">
+
+<table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+        <th>Elimina</th>
+        <th>Immagine</th>
+        <th>Prodotto</th>
+        <th>Tipo</th>
+        <th>Quantità</th>
+        <th>Prezzo Unitario</th>
+        <th>Subtotale</th>
+        </tr>
+      </thead>
+      <tbody>
+         {% for item in cart.items %}
+        <tr>
+          <td class=""><input type="checkbox" name="update[{{item.id}}][remove]" value="1" id="optionsCheckbox"></td>
+          <td class="muted center_text"><a href="{{item.product.url}}"><img src="{{item.product.featuredImage.low}}"></a></td>
+          <td><a href="{{item.product.url}}">{{item.name}}</a></td>
+          <td>{{item.product.type}}</td>
+          <td>
+            <div class="input-append">
+              <input class="span1" name="update[{{item.id}}][quantity]" id="appendedInputButton" placeholder="1" value="{{item.quantity}}" type="text">
+              <button class="btn" type="submit"><i class="icon-refresh"></i></button>
+            </div>
+          </td>
+          <td>{{cart.currency}} {{item.price}}</td>
+          <td>{{cart.currency}} {{item.subtotal}}</td>
+        </tr> 
+        {% endfor %}
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Subtotale</td>
+        <td><strong>{{cart.currency}} {{cart.total}}</strong></td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Invio</td>
+        <td><strong>{{cart.currency}} {{cart.shipping}}</strong></td>
+        </tr>   
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Tasse</td>
+        <td><strong>{{cart.currency}} {{cart.taxes}}</strong></td>
+        </tr> 
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Totale</td>
+        <td><strong>{{cart.currency}} {{cart.grandtotal}}</strong></td>
+        </tr>  
+      </tbody>
+      </table>
+      
+<div class="row mt20">
+      <div class="span4">
+            <button class="btn" type="submit">Aggiorna</button>
+      </div>      
+      <div class="span4">
+            <a href="/" class="btn ">Continua nel negozio</a>
+      </div>      
+      <div class="span4">
+            <a href="/order/checkout" class="btn btn-primary pull-right">Finalizza</a>
+      </div>
+</div>
+
+{#
+<div class="row mt20">
+      <div class="span12">
+
+                  <div class="accordion " id="accordion2">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                          <h5>Applica un codice Sconto</h5>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            <div class="control-group">
+                              <label for="input01" class="control-label">Discount code: </label>
+                              <div class="controls">
+                                <input type="text" id="input01" class="input-xlarge" placeholder="Enter your coupon here">
+                                <p class="help-block">You can only use one discount code at a time</p>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                          <h5>Applica un buono di compra</h5>
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                  
+                  
+                            <div class="control-group">
+                                      <label for="input01" class="control-label">Gift voucher: </label>
+                                      <div class="controls">
+                                        <input type="text" id="input01" class="input-xlarge" placeholder="Enter your gift voucher here">
+                                        <p class="help-block">You can use multiple gift vouchers at a time</p>
+                                      </div>
+                             </div>
+                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      </div>
+</div>
+
+
+
+<div class="row">
+      <div class="span4">
+            <button class="btn" type="submit">Aggiorna</button>
+      </div>      
+      <div class="span4">
+            <a href="/" class="btn ">Continua nel negozio</a>
+      </div>      
+      <div class="4">
+            <a href="/order/checkout" class="btn btn-primary pull-right">Finalizza</a>
+      </div>
+</div>
+#}
+
+</form>
+
+{% endblock %}

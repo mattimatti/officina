@@ -1,0 +1,64 @@
+            <!-- Testimonial Section -->
+            <section class="small-section">
+                <div class="container relative">                    
+                    
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            
+                          
+                            <!-- Section Title -->
+                            <h3 class="small-title"><span class="serif">Dicono di</span> noi:</h3>
+                            
+                            <div class="section-line mt-20 mb-30"></div>
+                            
+                            <!-- Slider -->
+                            <div class="single-carousel black owl-carousel">
+                                
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                        Hello. Mauris tincidunt orci in augue adipiscing interdum. Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Thanks!
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                        Emma Johnson, Company inc.
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                        Morbi gravida mattis sem, eget tincidunt risus malesuada vitae. Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit.
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                        Sam Deen, Company inc.
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                
+                                <!-- Slider Item -->
+                                <div>
+                                    <blockquote class="testimonial">
+                                        Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue, risus ut aliquam dapibus. Thanks!
+                                    </blockquote>
+                                    
+                                    <!-- Author -->
+                                    <div class="testimonial-author">
+                                        John Doe, Company inc.
+                                    </div>
+                                </div>
+                                <!-- End Slider Item -->
+                                
+                            </div>
+                            <!-- Ent Slider -->
+                            
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </section>
+            <!-- End Testimonial Section -->

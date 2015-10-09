@@ -1,0 +1,62 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+
+
+    <div class="row">
+      <div class="span6">
+      
+        <img  src="{{product.featuredImage.high}}" alt="{{ product.name }}"/>
+        
+
+         <ul class="thumbnails mt20">
+              {% for image in product.images %}
+              <li class="span2">
+                  <img class="thumbnail responsive" src="{{image.low}}" alt="{{ product.name }}">
+              </li>
+              {% endfor %}
+          </ul>
+      </div>
+      
+      <div class="span6">
+        <h3>{{ product.name }} <small>by {{product.attributes['vendor']}}</small></h3>
+        <hr/>
+        
+        <div class="row">
+          <div class="span3">
+          € {{product.price}}
+          </div>
+          <div class="span3">
+            <a class="btn btn-primary pull-right ajax"  href="/cart/add/{{ product.id }}" >Aggiungi al Carrello</a>
+          </div>
+        </div>
+        
+        <hr/>
+        <p>{{ product.description| raw }}</p>
+        <hr/>
+          <div class="row">
+          {% for key,value in product.attributes %}
+          
+          {% set fielddef = product.fields[key] %}
+          
+          <div class="span3">
+              <span><strong>{{fielddef.label}} :</strong></span> <span>{{value}}</span>
+          </div>
+          
+          {% endfor %}
+          </div>
+      </div>
+    </div>
+    
+    
+    
+
+
+    
+
+    
+{% endblock %}

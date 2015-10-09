@@ -1,0 +1,34 @@
+{% extends "layouts/theme.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+<div class="row">
+
+  <div class="span12">
+  
+  
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li>Account</li>
+    </ul>
+
+    <div class="row">
+      <div class="span9">
+        <h2>Account</h2>
+      </div>
+    </div>
+    
+    <hr />
+    
+
+    
+      <p>{{ customer.name }}</p>
+      <p>{{ customer.email }}</p>
+      
+      
+    </div>
+</div>
+{% endblock %}
