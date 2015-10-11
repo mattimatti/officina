@@ -39,3 +39,11 @@ Purtroppo la versione di owl-Carousel usata qui non permette lo scroll verticale
 Ora funziona solo col click.
 
 Provvederò a mettergli una copertina verosimile, modificherò lo script in modo che si possa utilizzare lo swipe su cellulare (utilizzerò questo plugin: http://labs.rampinteractive.co.uk/touchSwipe/demos/) e abbellirò le pagine dei vari capi, aggiungendo delle ombre e quant'altro (via CSS).
+
+##Nuove modifiche
+
+- Aggiunto swipe sullo slider verticale
+- aggiunti controlli esterni al taccuino, in modo da avere 3 modalità di sfoglio: swipe, click su taccuino, click su controlli
+- aggiunta di una copertina, in modo da dare un feel più verosimile
+- grafica css per dare tridimensionalità al catalogo
+- ottimizzazione lato jquery per eliminare bug di visualizzazione pagine

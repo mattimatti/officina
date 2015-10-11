@@ -105,42 +105,41 @@
     	a = l,
     	b = l;
     
-	for( l; l > 0; l-- ){
-		$('.swipe-section:eq('+(l-1)+')').css({
-			zIndex: x
-		});
-	    x++;
-	}
-	
+	for( l; l > 0; l-- ){ $('.swipe-section:eq('+(l-1)+')').css('z-index',x); x++; }
     s.css({
         transformOrigin: '50% 0%',
-        perspective: '100vh',
+        perspective: '150vh',
 		rotateX: '0deg'
     }).find("div:first-child").css({
         rotateX: '-180deg'
     });
-    
-    s.children('div.front').on('click',function(e){
+    function swipeFront() {
     	if(c < (b-1)){
         	$('.swipe-section:eq('+c+')').stop().transition({
         		rotateX: '180deg'
         	}, 700, function(){
+        		if(c == 0){ $('.swipe-section:eq('+c+')').css('z-index',((c+1)*10)); }
         		c++;
         		a--;
-        		$(this).css('z-index',c);
         	});
+        	if(c != 0){ $('.swipe-section:eq('+c+')').css('z-index',((c+1)*10)); }
     	}
-    });
-    s.children('div.back').on('click',function(e){
+    }
+    function swipeBack() {
     	if(c > 0){
         	$('.swipe-section:eq('+(c-1)+')').stop().transition({
         		rotateX: '0deg'
         	}, 700, function(){
         		c--;
         		a++;
-        	}).css('z-index',a);
+        	}).stop().css('z-index',a);
     	}
-    });
+    }
+    s.children('div.front').swipe({swipeUp:swipeFront}).on('click',swipeFront);
+    s.children('div.back').swipe({swipeDown:swipeBack}).on('click',swipeBack);
+    $('i.swipe-button.up').on('click',swipeFront);
+    $('i.swipe-button.down').on('click',swipeBack);
+    
     // Function for block height 100%
     function height_line(height_object, height_donor){
         height_object.height(height_donor.height());
