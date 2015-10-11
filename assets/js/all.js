@@ -89,7 +89,7 @@
     
     // Sections backgrounds
     
-    var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+    var pageSection = $(".home-section, .page-section, .swipe-section > div, .small-section, .split-section");
     pageSection.each(function(indx){
         
         if ($(this).attr("data-background")){
@@ -97,6 +97,50 @@
         }
     });
     
+    //vertical carousel
+    var s = $('.swipe-section'),
+    	x = 0,
+    	c = 0,
+    	l = s.length,
+    	a = l,
+    	b = l;
+    
+	for( l; l > 0; l-- ){
+		$('.swipe-section:eq('+(l-1)+')').css({
+			zIndex: x
+		});
+	    x++;
+	}
+	
+    s.css({
+        transformOrigin: '50% 0%',
+        perspective: '100vh',
+		rotateX: '0deg'
+    }).find("div:first-child").css({
+        rotateX: '-180deg'
+    });
+    
+    s.children('div.front').on('click',function(e){
+    	if(c < (b-1)){
+        	$('.swipe-section:eq('+c+')').stop().transition({
+        		rotateX: '180deg'
+        	}, 700, function(){
+        		c++;
+        		a--;
+        		$(this).css('z-index',c);
+        	});
+    	}
+    });
+    s.children('div.back').on('click',function(e){
+    	if(c > 0){
+        	$('.swipe-section:eq('+(c-1)+')').stop().transition({
+        		rotateX: '0deg'
+        	}, 700, function(){
+        		c--;
+        		a++;
+        	}).css('z-index',a);
+    	}
+    });
     // Function for block height 100%
     function height_line(height_object, height_donor){
         height_object.height(height_donor.height());
@@ -583,7 +627,7 @@
 function initPageSliders(){
     (function($){
         "use strict";
-        
+
         // Fullwidth slider
         $(".fullwidth-slider").owlCarousel({
             //transitionStyle: "backSlide",
@@ -649,15 +693,13 @@ function initPageSliders(){
         });
         
         
-        if ($(".owl-carousel").lenth) {
+        if ($(".owl-carousel").length) {
             var owl = $(".owl-carousel").data('owlCarousel');
             owl.reinit();
         }
-
+        
     })(jQuery);
 };
-
-    
     
 
 

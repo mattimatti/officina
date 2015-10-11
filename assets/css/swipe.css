@@ -1,0 +1,42 @@
+.fullheight {
+	height: 100vh;
+	padding: 5vh 0;
+}
+.fullheight .swipe-carousel {
+	width: calc( 90vh / 1.5882 );
+	height: 90vh;
+	margin: 0 auto;
+	background-color: transparent;
+	position: relative;
+	border-radius: 7px;
+}
+.fullheight .swipe-carousel .swipe-section {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: .7s;
+}
+.fullheight .swipe-carousel .swipe-section > div {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	background-repeat: no-repeat;
+	background-size: auto 200%;
+	background-color: #efefef;
+	background-blend-mode: multiply;
+}
+.fullheight .swipe-carousel .swipe-section > div.front {
+	background-position: center bottom;
+	border-radius: 0 0 7px 7px;
+}
+.fullheight .swipe-carousel .swipe-section > div.back {
+	background-position: center top;
+	border-radius: 7px 7px 0 0;
+}

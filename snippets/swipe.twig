@@ -1,0 +1,70 @@
+<!-- Swipe gallery -->
+<section id="i-capi" class="fullheight bg-dark">
+	<div class="swipe-carousel slider-container" id="capi-swipe">
+		{% set capi = [
+			{ 
+				'front': '',
+				'back': 'capo_01.jpg'
+			},
+			{ 
+				'front': 'capo_01.jpg',
+				'back': 'capo_02.jpg'
+			},
+			{ 
+				'front': 'capo_02.jpg',
+				'back': 'capo_03.jpg'
+			},
+			{ 
+				'front': 'capo_03.jpg',
+				'back': 'capo_04.jpg'
+			},
+			{ 
+				'front': 'capo_04.jpg',
+				'back': 'capo_05.jpg'
+			},
+			{ 
+				'front': 'capo_05.jpg',
+				'back': 'capo_06.jpg'
+			},
+			{ 
+				'front': 'capo_06.jpg',
+				'back': 'capo_07.jpg'
+			},
+			{ 
+				'front': 'capo_07.jpg',
+				'back': 'capo_08.jpg'
+			},
+			{ 
+				'front': 'capo_08.jpg',
+				'back': 'capo_09.jpg'
+			},
+			{ 
+				'front': 'capo_09.jpg',
+				'back': 'capo_10.jpg'
+			},
+			{ 
+				'front': 'capo_10.jpg',
+				'back': 'capo_11.jpg'
+			},
+			{ 
+				'front': 'capo_11.jpg',
+				'back': 'capo_12.jpg'
+			},
+			{ 
+				'front': 'capo_12.jpg',
+				'back': 'capo_13.jpg'
+			},
+			{ 
+				'front': 'capo_13.jpg',
+				'back': ''
+			}
+		]%}
+		{% set cl = (capi|length - 1) %}
+		{% for i in 0..cl %}
+		<div class="swipe-section bg-scroll">
+			<div class="back" data-background="{{media_path}}/capi/{{ capi[i].back }}"></div>
+			<div class="front" data-background="{{media_path}}/capi/{{ capi[i].front }}"></div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
